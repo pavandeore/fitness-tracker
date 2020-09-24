@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    
+    <h2 class="heading">Fitness Tracker</h2>
+    <div class="note">
+       <marquee><p>1 KG = 2.05 LB &nbsp;&nbsp;|&nbsp;&nbsp; 1 Feet = 12 Inches</p></marquee>
+    </div>
+    <div class="toggle-change">
+        <div>You are a
+            <p><input type="radio" class="trainer" name="role" value="Trainer" />Trainer</p>
+            <p><input type="radio" class="member" name="role" value="Member" />Member</p>
+            <button type="button" class="role-btn" >Submit</button>
+        </div>
+    </div><br/>
+    <div class="Bap-div">
+        <div class="main">
+            <h3>User Form</h3>
+            <input type="number" class="id" placeholder="Id">
+            <input type="text" class="name" placeholder="Name">
+            <input type="number" class="age" placeholder="Age ( in Years )">
+            <input type="number" class="weight" placeholder="Weight ( in LB )">
+            <input type="number" class="height" placeholder="Height ( in Inches )">
+            <button class="submit" type="button">Submit</button>
+            <button class="display" type="button">Display All</button>
+        </div>
+
+
+        <div class="display-div">
+
+        </div>
+
+        <div class="track-div">
+            <h2>Fitness Record</h2>
+            <div>
+                <input type="number" class="search-id" placeholder="Enter Id" >
+                <button class="get-data" type="button">Get Data</button>
+            </div>
+            <p></p>
+        </div>
+
+        <div class="diet-plan-div">
+            
+        </div>
+    </div>
+    <script src="script.js" type="module" defer></script>
+</body>
+</html>
