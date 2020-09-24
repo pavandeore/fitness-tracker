@@ -49,6 +49,28 @@
             
         </div>
     </div>
+    <button id="insert">upload data</button>
     <script src="script.js" type="module" defer></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-database.js"></script>
+
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyCekzZAE3frDswnv5WjLFjQ2EKKOG2ilRk",
+        authDomain: "fitness-tracker-web-app.firebaseapp.com",
+        databaseURL: "https://fitness-tracker-web-app.firebaseio.com",
+        projectId: "fitness-tracker-web-app",
+        storageBucket: "fitness-tracker-web-app.appspot.com",
+        messagingSenderId: "283049270259",
+        appId: "1:283049270259:web:5fd396aa52cdabb394d086"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    </script>
 </body>
 </html>

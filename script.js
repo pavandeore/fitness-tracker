@@ -14,6 +14,8 @@ function formula(height,weight,age){
     return ((weight*703)/height**2).toFixed(2)
 }
 
+const veryMainData = [];
+
 function addEntry(){
     
     let userid = document.querySelector('.id').value;
@@ -32,6 +34,18 @@ function addEntry(){
     
     Data.push(dataObj)
 
+    var firebaseRef = firebase.database().ref('Data');
+
+    firebaseRef.set(Data)
+
+    var displayRef = firebase.database().ref('Data');
+
+    displayRef.on("value", function(snapshot) {
+    veryMainData.push(snapshot.val());
+    }, function (error) {
+    console.log("Error: " + error.code);
+    });
+    console.log(veryMainData);
 }
 
 function displayData(){
