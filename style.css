@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne&display=swap');
 *{
     font-family: 'Syne';
+    
 }
 ul li{
     list-style: none;
@@ -45,7 +46,7 @@ button:active{
     justify-content: space-evenly;
 }
 .heading > ul > li > a > i{
-    color: rgb(219, 93, 71);
+    color: #252525;
 }
 .quote{
     padding: 10px;
@@ -67,6 +68,7 @@ button:active{
     align-items: center;
     justify-content: space-evenly;
     box-shadow: 0px 3px 3px 2px #c0c0c0;
+    background: #e0e0e0;
 
     animation-name: toggle-animations;
     animation-duration: 2s;
