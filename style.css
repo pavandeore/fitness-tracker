@@ -112,6 +112,8 @@ button:active{
 .track-div > div{
     display: flex;
     justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
 }
 
 .diet-plan-div{
@@ -119,6 +121,7 @@ button:active{
     padding: 5px 15px;
     width: 55%;
     box-shadow: 0px 3px 3px 2px #c0c0c0;
+    color: #fff;
 }
 .diet-plan-div > h2{
     text-align: center;

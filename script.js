@@ -12,7 +12,7 @@ let submit = document.querySelector('.submit');
 let get = document.querySelector('.get-data');
 
 
-let trackDiv = document.querySelector('.track-div > div');
+let trackDiv = document.querySelector('.track-div');
 
 
 function formula(height,weight,age){
@@ -153,8 +153,9 @@ function getData(){
                   </table>
                   </div>`
               }
- 
-              innerDiv.innerHTML = `<p>NAME - ${entry.name}</p> <p>BMI - ${bmi}</p><p>Status - ${status}</p> <hr/>`;
+              
+              innerDiv.innerHTML = `<p>NAME - ${entry.name}</p> <p>BMI - ${bmi}</p> <p>Status - ${status}</p> <hr/>`;
+              innerDiv.style.display = "block";
               trackDiv.appendChild(innerDiv);
               
          }
