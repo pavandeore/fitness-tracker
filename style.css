@@ -34,9 +34,18 @@ button:active{
     text-align: center;
     font-size: 2.3rem;
     text-shadow: 5px 5px 3px #e0e0e0;
-    padding: 15px;
+    padding: 10px;
     background: cadetblue;
     border-radius: 10px;
+}
+.heading > ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-evenly;
+}
+.heading > ul > li > a > i{
+    color: rgb(219, 93, 71);
 }
 .quote{
     padding: 10px;
