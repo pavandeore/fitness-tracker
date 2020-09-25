@@ -1,4 +1,12 @@
 import Data from './data.js';
+import Quotes from './quotes.js';
+
+
+let random = Math.round(Math.random()*Quotes.length);
+console.log(random);
+let quoteDiv = document.querySelector('.quote');
+quoteDiv.innerHTML = `<p>${Quotes[random]}</p>`;
+
 
 let submit = document.querySelector('.submit');
 let display = document.querySelector('.display');

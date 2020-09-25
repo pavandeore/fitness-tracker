@@ -38,6 +38,20 @@ button:active{
     background: cadetblue;
     border-radius: 10px;
 }
+.quote{
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    color: coral;
+    animation-name: quote-animation;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+@keyframes quote-animation{
+    from{color: blue; transform: scale(0.90);}
+    to{color: green; transform: scale(1);}
+}
 .toggle-change > div{
     padding: 10px;
     display: flex;
