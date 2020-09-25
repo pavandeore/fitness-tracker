@@ -14,7 +14,7 @@ function formula(height,weight,age){
     return ((weight*703)/height**2).toFixed(2)
 }
 
-const veryMainData = [];
+const firebaseMainData = [];
 
 function addEntry(){
     
@@ -37,20 +37,22 @@ function addEntry(){
     var firebaseRef = firebase.database().ref('Data');
 
     firebaseRef.set(Data)
-
-    var displayRef = firebase.database().ref('Data');
-
-    displayRef.on("value", function(snapshot) {
-    veryMainData.push(snapshot.val());
-    }, function (error) {
-    console.log("Error: " + error.code);
-    });
-    console.log(veryMainData);
+    setTimeout(alert('success'),2000)
 }
 
 function displayData(){
    
     displayDiv.innerHTML = "<h2>Available Data</h2>";
+
+    var displayRef = firebase.database().ref('Data');
+
+    displayRef.on("value", function(snapshot) {
+    console.log(snapshot.val());
+    }, function (error) {
+    console.log("Error: " + error.code);
+    });
+    
+  
     Data.forEach((entry)=>{
         let p = document.createElement('p');
         p.innerHTML = ` <p> Id: ${entry.id} <br/> Name: ${entry.name} <br/> Age: ${entry.age} <br/> Height: ${entry.height} <br/> weight: ${entry.weight} </p>`;
@@ -147,14 +149,18 @@ function roleHandle(){
     let trainer = document.querySelector('.trainer');
     let member = document.querySelector('.member');
 
+    let dietPlanDiv = document.querySelector('.diet-plan-div');
     let mainDiv = document.querySelector('.main');
 
     console.log('test')
     if(member.checked){
         mainDiv.style.display = "none";
+        displayDiv.style.display = "none";
     }
     if(trainer.checked){
         mainDiv.style.display = "flex";
+        trackDiv.style.display = "none";
+        dietPlanDiv.style.display = "none";
     }
 }
 
